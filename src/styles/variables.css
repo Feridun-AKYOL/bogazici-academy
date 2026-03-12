@@ -1,21 +1,21 @@
 :root {
   color-scheme: light;
-  --color-ink: #0b1f3a;
-  --color-ink-soft: #2a3b57;
-  --color-cream: #f8f4ef;
+  --color-ink: #111827;
+  --color-ink-soft: #6b7280;
+  --color-cream: #f9fafb;
   --color-paper: #ffffff;
-  --color-sand: #eef5fb;
-  --color-primary: #2b6fa6;
-  --color-primary-dark: #1f517c;
-  --color-accent: #74b2e1;
-  --color-accent-soft: #d9ecfa;
-  --color-ink-contrast: #061226;
-  --color-border: rgba(11, 31, 58, 0.12);
-  --shadow-soft: 0 20px 60px rgba(16, 24, 40, 0.12);
-  --shadow-card: 0 12px 32px rgba(16, 24, 40, 0.08);
-  --radius-lg: 24px;
-  --radius-md: 16px;
-  --radius-sm: 12px;
+  --color-sand: #f3f4f6;
+  --color-primary: #6366f1;
+  --color-primary-dark: #4f46e5;
+  --color-accent: #a5b4fc;
+  --color-accent-soft: #eef2ff;
+  --color-ink-contrast: #111827;
+  --color-border: rgba(0, 0, 0, 0.09);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
   --container-width: 1200px;
   --section-padding: 96px;
 }

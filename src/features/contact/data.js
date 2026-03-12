@@ -12,7 +12,9 @@ export const contactContent = {
       phone: 'Telefon',
       goal: 'Hedef / Notlar',
       submit: 'Gorusme Iste',
+      loading: 'Gonderiliyor...',
       success: 'Tesekkurler! En kisa surede size donus yapacagiz.',
+      error: 'Bir hata olustu. Lutfen tekrar deneyin.',
     },
     info: {
       title: 'Dogru ekip, dogru takip',
@@ -44,7 +46,9 @@ export const contactContent = {
       phone: 'Phone',
       goal: 'Goal / Notes',
       submit: 'Request a Call',
+      loading: 'Sending...',
       success: 'Thank you! We will get back to you shortly.',
+      error: 'Something went wrong. Please try again.',
     },
     info: {
       title: 'The right team, the right tracking',
@@ -76,7 +80,9 @@ export const contactContent = {
       phone: 'Telefoon',
       goal: 'Doel / Opmerkingen',
       submit: 'Vraag Gesprek Aan',
+      loading: 'Verzenden...',
       success: 'Bedankt! We nemen snel contact op.',
+      error: 'Er is iets fout gegaan. Probeer opnieuw.',
     },
     info: {
       title: 'Het juiste team, de juiste opvolging',

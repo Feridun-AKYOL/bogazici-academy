@@ -25,8 +25,13 @@ export function ContactSection() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     setStatus('loading')
-    await submitContactForm(formData)
-    setStatus('success')
+    try {
+      await submitContactForm(formData)
+      setStatus('success')
+      setFormData({ name: '', email: '', phone: '', goal: '' })
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -74,11 +79,14 @@ export function ContactSection() {
               />
             </div>
             <Button type="submit" variant="primary" disabled={status === 'loading'}>
-              {content.form.submit}
+              {status === 'loading' ? content.form.loading : content.form.submit}
             </Button>
-            {status === 'success' ? (
+            {status === 'success' && (
               <p className="form__success">{content.form.success}</p>
-            ) : null}
+            )}
+            {status === 'error' && (
+              <p className="form__error">{content.form.error}</p>
+            )}
           </form>
         </div>
         <div className="contact__info reveal delay-1">

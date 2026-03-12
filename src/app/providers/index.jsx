@@ -5,8 +5,12 @@ const LanguageContext = createContext(null)
 const supportedLanguages = ['tr', 'en', 'nl']
 
 function getInitialLanguage() {
-  const stored = localStorage.getItem('ba_language')
-  if (stored && supportedLanguages.includes(stored)) return stored
+  try {
+    const stored = localStorage.getItem('ba_language')
+    if (stored && supportedLanguages.includes(stored)) return stored
+  } catch {
+    // localStorage unavailable (private mode, disabled cookies, etc.)
+  }
   const browser = navigator.language?.slice(0, 2)
   if (browser && supportedLanguages.includes(browser)) return browser
   return 'tr'
@@ -21,7 +25,11 @@ export function LanguageProvider({ children }) {
       setLanguage: (next) => {
         if (!supportedLanguages.includes(next)) return
         setLanguage(next)
-        localStorage.setItem('ba_language', next)
+        try {
+          localStorage.setItem('ba_language', next)
+        } catch {
+          // localStorage unavailable
+        }
       },
       supportedLanguages,
     }),

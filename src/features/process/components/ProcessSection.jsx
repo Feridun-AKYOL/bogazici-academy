@@ -18,7 +18,7 @@ export function ProcessSection() {
         <div className="steps-grid">
           {content.steps.map((step, index) => (
             <div key={step.title} className="step-card reveal">
-              <span className="step-index">0{index + 1}</span>
+              <span className="step-index">{String(index + 1).padStart(2, '0')}</span>
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </div>

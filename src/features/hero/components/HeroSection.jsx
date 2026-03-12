@@ -29,8 +29,17 @@ export function HeroSection() {
             ))}
           </ul>
         </div>
-        <div className="hero__card reveal delay-1">
-          <div className="hero__card-inner">
+
+        <div className="hero__visual reveal delay-1">
+          <div className="hero__image-wrap">
+            <img
+              src="https://picsum.photos/seed/students-study/640/480"
+              alt="Ogrenciler calisiyor"
+              className="hero__image"
+            />
+            <div className="hero__image-overlay" />
+          </div>
+          <div className="hero__stats-row">
             {content.stats.map((stat) => (
               <div key={stat.label} className="hero__stat">
                 <span className="hero__stat-value">{stat.value}</span>
@@ -38,7 +47,6 @@ export function HeroSection() {
               </div>
             ))}
           </div>
-          <div className="hero__glow" />
         </div>
       </Container>
     </section>
